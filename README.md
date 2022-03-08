@@ -1,6 +1,27 @@
-<a href="https://github.com/SHARKDAL/github-readme-stats">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=SHARKDAL&repo=github-readme-stats" />
-</a>
-<a href="https://github.com/SHARKDAL/convoychat">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=SHARKDAL&repo=convoychat" />
-</a>
+nhas (22 sloc) 583 Bytes 
+   
+nome: Gerar Dados
+
+em:
+  horário: # executar a cada 12 horas
+    - cron: "* */12 * * * *
+  workflow_dispatch:
+
+empregos:
+  construir:
+    nome: Empregos para atualizar dados
+    em funcionamento: ubuntu-mais recente
+    passos:
+      # Animação cobra
+      - usos: Platane/snk@master
+        id: snake-gif
+        com:
+          github_user_name: devedobro
+          svg_out_path: dist/github-contribution-grid-snake.svg
+
+      - usos: crazy-max/ghaction-github-pages@v2.1.3
+        com:
+          target_branch: saída
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ segredos. GITHUB_TOKEN }}
